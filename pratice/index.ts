@@ -13,6 +13,7 @@ interface Todo {
 }
 
 axios.get(url).then(response => {
+  // adding "as Todo" pretty much tells TS that this gonna be one of those todods
   const todo = response.data as Todo
 
   // here is an error that we wouldnt find out until compiling in js
@@ -21,10 +22,20 @@ axios.get(url).then(response => {
   // const title = todo.title
   // const finished = todo.finished
 
+
+  // the 3 have red scrigly lines, its ts saying something is wrong based on type
+  // and it explains the error too
+  // console.log(`
+  // the todo with ID: ${todo.ID}
+  // title of: ${todo.Title}
+  // finished: ${todo.Finished}
+  // `);
+
+  // corrected way
   console.log(`
-  the todo with ID: ${todo.ID}
+  the todo with ID: ${todo.id}
   title of: ${todo.title}
-  finished: ${todo.Finished}
+  completed: ${todo.completed}
   `);
 })
 
