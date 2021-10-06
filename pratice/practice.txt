@@ -1,0 +1,5 @@
+So for now Im just going to set up to make a api call and see how type script
+catches the errors
+
+
+api - https://jsonplaceholder.typicode.com/todos/1
